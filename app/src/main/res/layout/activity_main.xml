@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/actionBarBackground"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="?colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentHolder"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBack"
+        style="@style/Widget.Material3.Button.IconButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        app:icon="@drawable/arrow_left_solid"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/actionBarBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvActivityTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="Activity Title"
+        android:textColor="?colorOnPrimary"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/fragmentHolder"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_behavior="com.google.android.material.bottomnavigation.BottomNavigationViewBehavior"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvActivityTitle"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backgroundTint="?colorPrimary"
+        app:itemTextColor="@color/dark_gray"
+        app:itemIconTint="@color/dark_gray"
+        app:itemRippleColor="@color/dark_gray"
+        app:itemActiveIndicatorStyle="@style/App.Custom.Indicator"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/nav_bar_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

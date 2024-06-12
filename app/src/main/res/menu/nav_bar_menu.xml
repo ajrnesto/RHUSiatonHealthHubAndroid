@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/miServices"
+            android:icon="@drawable/house_solid"
+            android:title="Home" />
+
+        <item android:id="@+id/miAppointments"
+            android:icon="@drawable/calendar_days_solid"
+            android:title="Appointments" />
+
+        <!--<item android:id="@+id/miProfile"
+            android:icon="@drawable/user_solid"
+            android:title="Patient Form" />-->
+
+        <item android:id="@+id/miMenu"
+            android:icon="@drawable/user_solid"
+            android:title="Profile" />
+    </group>
+</menu>

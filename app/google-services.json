@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "862008777831",
+    "project_id": "healthhub-siaton",
+    "storage_bucket": "healthhub-siaton.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:862008777831:android:a53be2de2f89f5bd4f88c2",
+        "android_client_info": {
+          "package_name": "com.rhu"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqmU1VkKzYfTTBXRBcPUD3GfrrX0OgtcQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

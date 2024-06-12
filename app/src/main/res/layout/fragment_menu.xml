@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.EmptyFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="?colorPrimary"
+            app:cardCornerRadius="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeWidth="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="32dp">
+
+                <TextView
+                    android:id="@+id/healthhub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_regular"
+                    android:text="RHU Siaton"
+                    android:textColor="?colorOnPrimary"
+                    android:textFontWeight="600"
+                    android:textSize="32sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/healthhub_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_regular"
+                    android:text="HealthHub"
+                    android:textColor="?colorSecondary"
+                    android:textFontWeight="600"
+                    android:textSize="32sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/healthhub" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnHealthRecords"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Health Records"
+            android:insetTop="0dp"
+            android:insetLeft="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            app:cornerRadius="0dp"
+            android:fontFamily="@font/quicksand_medium"
+            app:backgroundTint="?colorOnPrimary"
+            android:textColor="?colorPrimary"
+            android:paddingVertical="20dp"
+            android:textSize="16sp"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMedicalHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_medium"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:paddingVertical="20dp"
+            android:text="Medical History"
+            android:textAlignment="textStart"
+            android:textColor="?colorPrimary"
+            android:textSize="16sp"
+            app:backgroundTint="?colorOnPrimary"
+            app:cornerRadius="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnHealthRecords" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My Profile"
+            android:insetTop="0dp"
+            android:insetLeft="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            app:cornerRadius="0dp"
+            android:fontFamily="@font/quicksand_medium"
+            app:backgroundTint="?colorOnPrimary"
+            android:textColor="?colorPrimary"
+            android:paddingVertical="20dp"
+            android:textSize="16sp"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnMedicalHistory" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSignOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Log out"
+            android:insetTop="0dp"
+            android:insetLeft="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            app:cornerRadius="0dp"
+            android:fontFamily="@font/quicksand_medium"
+            app:backgroundTint="?colorOnPrimary"
+            android:textColor="@color/tomato"
+            android:paddingVertical="20dp"
+            android:textSize="16sp"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnProfile" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

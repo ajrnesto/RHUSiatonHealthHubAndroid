@@ -1,0 +1,31 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.RHU" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/emerald</item>
+        <item name="colorPrimaryVariant">@color/emerald</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/light_green</item>
+        <item name="colorSecondaryVariant">@color/light_green</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowBackground">@color/white</item>
+        <!-- Customize your theme here. -->
+        <item name="colorSurface">@color/green_surface</item>
+    </style>
+
+    <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/white</item>
+    </style>
+
+    <style name="App.Custom.TimePicker" parent="@style/ThemeOverlay.MaterialComponents.TimePicker">
+        <item name="colorOnSecondary">@color/white</item>
+    </style>
+
+    <style name="App.Custom.TabTextAppearance" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="fontFamily">@font/quicksand_regular</item>
+    </style>
+</resources>

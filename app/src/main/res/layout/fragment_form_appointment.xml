@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.EmptyFragment">
+
+    <ScrollView
+        android:id="@+id/svAppointmentForm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/clLocationAndAppointmentType"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed">
+
+                <TextView
+                    android:id="@+id/healthhub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_regular"
+                    android:text="Health"
+                    android:textColor="?colorPrimary"
+                    android:textFontWeight="600"
+                    android:textSize="32sp"
+                    app:layout_constraintEnd_toStartOf="@+id/healthhub_2"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@+id/healthhub_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_regular"
+                    android:text="Hub"
+                    android:textColor="?colorPrimary"
+                    android:textFontWeight="600"
+                    android:textSize="32sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/healthhub"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/healthhub"
+                    app:layout_constraintTop_toTopOf="@+id/healthhub" />
+
+                <TextView
+                    android:id="@+id/appointment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_regular"
+                    android:text="Appointment System"
+                    android:textFontWeight="600"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/healthhub" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clLocationAndAppointmentType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:paddingHorizontal="16dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/clPatientForm"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clLogo">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:textColor="?colorPrimary"
+                    android:text="Choose a Type of Appointment"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilTypeOfAppointment"
+                    style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:boxBackgroundColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/menuTypeOfAppointment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawablePadding="14dp"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:hint="Service"
+                        android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:textColor="?colorPrimary"
+                    android:text="Select Preferred Health Center Location"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tilTypeOfAppointment" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilLocation"
+                    style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:boxBackgroundColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/menuLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawablePadding="14dp"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:hint="Health Center Location"
+                        android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clPatientForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:visibility="gone"
+                android:paddingHorizontal="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clLocationAndAppointmentType"
+                app:layout_constraintBottom_toTopOf="@+id/clScheduleDate">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:text="Review Your Patient Form"
+                    android:textColor="?colorPrimary"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPatientForm"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="Review Patient Form"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clScheduleDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:paddingHorizontal="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/clScheduleTime"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clPatientForm">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:textColor="?colorPrimary"
+                    android:text="Set Day for Appointment"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilDate"
+                    style="@style/Widget.Material3.TextInputLayout.FilledBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:boxBackgroundColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etDate"
+                        style="@style/Widget.Material3.TextInputEditText.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawablePadding="14dp"
+                        android:focusable="false"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:hint="Date"
+                        android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clScheduleTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:layout_marginTop="32dp"
+                android:animateLayoutChanges="true"
+                android:paddingHorizontal="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/clScheduleDate">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:text="Select a Schedule"
+                    android:textColor="?colorPrimary"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvAvailableSlots"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:text="Available Slots: 0"
+                    android:textSize="16sp"
+                    android:textColor="?colorPrimary"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvHours"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAvailableSlots" />
+
+                <TextView
+                    android:id="@+id/tvNoAvailableSchedule"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    tools:visibility="visible"
+                    android:visibility="gone"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:text="There are no available schedules for the selected health center, location and date"
+                    android:textAlignment="center"
+                    android:textColor="@color/tomato"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+                <TextView
+                    android:id="@+id/tvNoSlots"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:text="There are no available slots left for the selected service"
+                    android:textAlignment="center"
+                    android:textColor="@color/tomato"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

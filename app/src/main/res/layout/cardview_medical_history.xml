@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvHealthRecord"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="8dp"
+        app:cardBackgroundColor="?colorPrimary"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeWidth="0dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeWidth="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <TextView
+                    android:id="@+id/tvTimestamp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_regular"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="23 Feb 2022" />
+
+                <TextView
+                    android:id="@+id/tvVitalInformationTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="Vital Information"
+                    android:textColor="?colorPrimary"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTimestamp"
+                    app:layout_constraintVertical_chainStyle="spread_inside" />
+
+                <TextView
+                    android:id="@+id/tvBloodPressure"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/quicksand_medium"
+                    app:layout_constraintEnd_toStartOf="@+id/tvO2SAT"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvVitalInformationTitle"
+                    app:layout_constraintVertical_chainStyle="spread_inside"
+                    tools:text="Blood Pressure" />
+
+                <TextView
+                    android:id="@+id/tvRespiratoryRate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/quicksand_medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tvO2SAT"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvBloodPressure"
+                    app:layout_constraintVertical_chainStyle="spread_inside"
+                    tools:text="Respiratory Rate" />
+
+                <TextView
+                    android:id="@+id/tvBodyTemperature"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/quicksand_medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tvO2SAT"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvRespiratoryRate"
+                    app:layout_constraintVertical_chainStyle="spread_inside"
+                    tools:text="Body Temperature" />
+
+                <TextView
+                    android:id="@+id/tvPulseRate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintEnd_toStartOf="@+id/tvO2SAT"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/quicksand_medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvBodyTemperature"
+                    app:layout_constraintVertical_chainStyle="spread_inside"
+                    tools:text="Pulse Rate" />
+
+                <TextView
+                    android:id="@+id/tvO2SAT"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/quicksand_medium"
+                    app:layout_constraintStart_toStartOf="@+id/guideline7"
+                    app:layout_constraintTop_toBottomOf="@+id/tvVitalInformationTitle"
+                    app:layout_constraintVertical_chainStyle="spread_inside"
+                    tools:text="O2SAT" />
+
+                <TextView
+                    android:id="@+id/tvHeight"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/quicksand_medium"
+                    app:layout_constraintStart_toStartOf="@+id/guideline7"
+                    app:layout_constraintTop_toBottomOf="@+id/tvO2SAT"
+                    app:layout_constraintVertical_chainStyle="spread_inside"
+                    tools:text="Height" />
+
+                <TextView
+                    android:id="@+id/tvWeight"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/quicksand_medium"
+                    app:layout_constraintStart_toStartOf="@+id/guideline7"
+                    app:layout_constraintTop_toBottomOf="@+id/tvHeight"
+                    app:layout_constraintVertical_chainStyle="spread_inside"
+                    tools:text="Weight" />
+
+                <TextView
+                    android:id="@+id/tvDiagnosisTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="Diagnosis and Treatment"
+                    android:textColor="?colorPrimary"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPulseRate"
+                    app:layout_constraintVertical_chainStyle="spread_inside" />
+
+                <TextView
+                    android:id="@+id/tvChiefComplaint"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDiagnosisTitle"
+                    app:layout_constraintVertical_chainStyle="spread_inside"
+                    tools:text="Chief Complaint" />
+
+                <TextView
+                    android:id="@+id/tvDiagnosis"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/quicksand_medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvChiefComplaint"
+                    app:layout_constraintVertical_chainStyle="spread_inside"
+                    tools:text="This is an example of a very long diagnosis. This is an example of a very long diagnosis. This is an example of a very long diagnosis. This is an example of a very long diagnosis. This is an example of a very long diagnosis. This is an example of a very long diagnosis. " />
+
+                <TextView
+                    android:id="@+id/tvMedications"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/quicksand_medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDiagnosis"
+                    app:layout_constraintVertical_chainStyle="spread_inside"
+                    tools:text="This is an example of a very long diagnosis. This is an example of a very long diagnosis. This is an example of a very long diagnosis. This is an example of a very long diagnosis. This is an example of a very long diagnosis. This is an example of a very long diagnosis. " />
+
+                <TextView
+                    android:id="@+id/tvTreatmentPlan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/quicksand_medium"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvMedications"
+                    app:layout_constraintVertical_chainStyle="spread_inside"
+                    tools:text="This is an example of a very long diagnosis. This is an example of a very long diagnosis. This is an example of a very long diagnosis. This is an example of a very long diagnosis. This is an example of a very long diagnosis. This is an example of a very long diagnosis. " />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
